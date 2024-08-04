@@ -1,1 +1,36 @@
-Miximate
+<html>
+    <head>
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <img src="dog.jpg" id="dog">
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        
+        const dog = document.getElementById("dog");
+
+        dog.addEventListener(
+        "mouseenter",
+        (event) => {
+
+            console.log("dynks");
+            var sound = new Howl({
+                src: ['hit.mp3']
+            });
+            sound.play();
+        },
+        false,
+        );
+
+    </script>
+</html>
