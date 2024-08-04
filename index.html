@@ -18,18 +18,25 @@
     <script>
         
         const dog = document.getElementById("dog");
+        var sound = new Howl({
+                        src: ['hit.mp3']
+                    });
 
         dog.addEventListener(
-        "mouseenter",
-        (event) => {
+            "mouseenter",
+            (event) => {
+                dog.src = "dogga.jpg"
+                sound.play();
+            },
+            false,
+        );
 
-            console.log("dynks");
-            var sound = new Howl({
-                src: ['hit.mp3']
-            });
-            sound.play();
-        },
-        false,
+        dog.addEventListener(
+            "mouseleave",
+            (event) => {
+                dog.src = "dog.jpg"
+            },
+            false,
         );
 
     </script>
